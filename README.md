@@ -1,4 +1,4 @@
-# DNS-Practice-
+# DNS-Practice
 <p align="center">
   
 ![image](https://github.com/user-attachments/assets/f252cd1b-789a-47c2-9fc3-e420490c815f)
@@ -25,7 +25,6 @@ This tutorial demonstrates how to create and manage DNS A and CNAME records in A
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
 - Windows Server VM (DC-1)
 - Windows Client VM (Client-1)
 - Functional Active Directory Domain
