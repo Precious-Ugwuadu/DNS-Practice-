@@ -94,12 +94,50 @@ Run the command ipconfig /flushdns and ipconfig /displaydns to clear the saved D
 ![image](https://github.com/user-attachments/assets/4e76f5b1-8834-4787-89a6-83d8636e5fe7)
 
 Ping "mainframe" again and notice that the response now shows the updated IP address (8.8.8.8) from the new DNS record.
+
 WHY?
 Because the DNS cache was cleared, the system had to query the DNS server again. This time, it retrieved the updated A-record for “mainframe,” which reflects the new IP address you set.
+
+
+<h2>CNAME Record Exercise</h2>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/97cbf70e-15a7-4fe5-b959-6bc36b5a60b4)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+"Return to DC-1 and create a CNAME record that maps the hostname 'search' to 'www.google.com'."
+HOW TO:
+On DC-1, Open DNS Manager > Expand dc-1 > Forward Lookup Zones > mydomain.com > Right click  > New Alias (CNAME) > (set up Alias name and FQDN) SEARCH > WWW.GOOGLE.COM > OK.  
+
+![image](https://github.com/user-attachments/assets/b7d4d8b5-8079-4f1d-b11c-83d9c7e9332d)
+
+Go back to Client-1 and attempt to ping “search”, observe the results of the CNAME record
+
+![image](https://github.com/user-attachments/assets/126e8fb3-d9ea-40b1-887b-c4360a03cb20)
+
+On Client-1, run nslookup search and check the output to see the CNAME record details.
+why:
+The nslookup command checks how DNS resolves the name search. If the CNAME record is set up properly, the output will show that search points to www.google.com.
+
+![image](https://github.com/user-attachments/assets/ec3fdab6-c98a-481d-8ea8-643537157d0c)
+
+I tried searching the name "https://search" and i got the above error message because the name does not match certificate of google.com
+
+Lab Summary 
+This lab covers:
+
+A-Record Setup: You create a DNS A-record for mainframe so it resolves to an IP.
+→ Shows how DNS maps names to IPs.
+
+DNS Cache Behavior: Changing the IP in DNS doesn’t update immediately on the client due to caching.
+→ Shows the importance of flushing DNS cache to get updated records.
+
+CNAME Record: You create a CNAME so search points to www.google.com.
+→ Demonstrates how aliases work in DNS.
+
+Why It Matters
+This lab teaches basic DNS management—how to add records, troubleshoot resolution issues, and understand caching.
 </p>
+
 <br />
