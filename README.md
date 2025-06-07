@@ -37,9 +37,9 @@ This tutorial demonstrates how to create and manage DNS A and CNAME records in A
   
 ![image](https://github.com/user-attachments/assets/a9fc5771-0045-4f64-8e01-551feec7e98f)
 
-To begin, Log in to DC-1 using your domain administrator account (mydomain.com\jane_admin).
+To begin, log in to DC-1 using your domain administrator account (mydomain.com\jane_admin).
 
-![image](https://github.com/user-attachments/assets/c60d2e05-8fc2-4810-9db0-04b37d639431)
+![image](https://github.com/user-attachments/assets/5a36ab93-977b-4726-942b-9bac95af55a2)
 
 Then, log in to Client-1 using an account with administrative privileges (mydomain\jane_admin).
 
@@ -47,7 +47,7 @@ Then, log in to Client-1 using an account with administrative privileges (mydoma
 
 From Client-1, attempt to ping "mainframe" and observe that the request fails.
 HOW TO:
-On Client-1, Open powershell > Type: ping mainframe > Press Enter and observe the failure message.
+On Client-1, open PowerShell> Type: ping mainframe > Press Enter and observe the failure message.
 
 ![image](https://github.com/user-attachments/assets/b3ba09f6-336a-4d5a-9041-c6c02ecb1956)
 
