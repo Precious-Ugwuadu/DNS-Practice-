@@ -5,7 +5,7 @@
 
 </p>
 
-<h1>DNS - Prerequisites and Installation</h1>
+<h1>DNS - Prerequisites and Installation</h1> 
 This tutorial demonstrates how to create and manage DNS A and CNAME records in Active Directory, test DNS resolution, and work with local DNS caching on a Windows Server environment.<br />
 
 
